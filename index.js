@@ -4,11 +4,11 @@
 */
 var loaderUtils = require("loader-utils");
 
-module.exports = function (content) {
+module.exports = function(content) {
   'use strict';
   var exportPath = '';
   this.cacheable && this.cacheable();
-  if(!this.emitFile){
+  if (!this.emitFile) {
     throw new Error("emitFile is required from module system");
   }
   var query = loaderUtils.parseQuery(this.query);
@@ -17,10 +17,14 @@ module.exports = function (content) {
     content: content,
     regExp: query.regExp
   });
-  if(query.relativePath){
-    var relativePath = query.relativePath;
+  if (query.relativePath) {
+    var relativePath =loaderUtils.interpolateName(this, query.relativePath || "[hash].[ext]", {
+      context: query.context || this.options.context,
+      content: content,
+      regExp: query.regExp
+    });
     exportPath = JSON.stringify(relativePath);
-  }else{
+  } else {
     exportPath = JSON.stringify(url);
   }
   this.emitFile(url, content);
