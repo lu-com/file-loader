@@ -1,8 +1,8 @@
 {
-  "name": "file-loader",
-  "version": "0.8.5",
-  "author": "Tobias Koppers @sokra",
-  "description": "file loader module for webpack",
+  "name": "file-relative-loader",
+  "version": "0.8.6",
+  "author": "Tobias Koppers @sokra and UFO",
+  "description": "file relative loader module for webpack",
   "files": [
     "index.js"
   ],
@@ -18,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/webpack/file-loader.git"
+    "url": "https://github.com/lu-com/file-relative-loader.git"
   },
   "bugs": {
-    "url": "https://github.com/webpack/file-loader/issues"
+    "url": "https://github.com/lu-com/file-relative-loader/issues"
   },
-  "homepage": "https://github.com/webpack/file-loader",
+  "homepage": "https://github.com/lu-com/file-relative-loader",
   "main": "index.js",
   "directories": {
     "test": "test"

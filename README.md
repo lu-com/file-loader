@@ -1,8 +1,10 @@
-# file loader for webpack
+# file relative loader for webpack
 
 ## Usage
 
 [Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)
+
+The follow document is reference file loader.
 
 ``` javascript
 var url = require("file!./file.png");
@@ -58,6 +60,11 @@ require("file?name=picture.png!./myself.png");
 require("file?name=[path][name].[ext]?[hash]!./dir/file.png")
 // => dir/file.png?e43b20c069c4a01867c31e98cbce33c9
 ```
+
+## Relative Feature
+
+You can set the `relative-path` parameter for query configuration.
+If you want set different path in js you can set this parameter. Due to `file-loader` the reference path and dirctory path equally.
 
 ## License
 
